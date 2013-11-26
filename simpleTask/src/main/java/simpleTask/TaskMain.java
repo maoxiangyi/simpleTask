@@ -7,6 +7,7 @@ public class TaskMain
 {
     public static void main( String[] args )
     {
-    	SimpleTaskHandler.start();// 启动任务管理器
+    	//调用静态方法启动任务执行器
+    	SimpleTaskHandler.start();
     }
 }
