@@ -1,13 +1,12 @@
 package simpleTask;
 
 /**
- * Hello world!
- *
+ * Task start
  */
 public class TaskMain 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    	SimpleTaskHandler.start();// 启动任务管理器
     }
 }
