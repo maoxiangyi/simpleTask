@@ -180,14 +180,35 @@ public class SimpleTaskHandler {
 	 * @throws InstantiationException
 	 */
 	@SuppressWarnings("unchecked")
-	private static void run() throws ClassNotFoundException, SecurityException,
-			NoSuchMethodException, IllegalArgumentException,
-			IllegalAccessException, InvocationTargetException,
-			InstantiationException {
-		Class<? extends Thread> clazz = (Class<? extends Thread>) Class
-				.forName(className);
-		Method method = clazz.getMethod("start");
-		method.invoke(clazz.newInstance());
+	private static void run() {
+		Class<? extends Thread> clazz;
+		try {
+			clazz = (Class<? extends Thread>) Class
+					.forName(className);
+			Method method = clazz.getMethod("start");
+			method.invoke(clazz.newInstance());
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchMethodException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
