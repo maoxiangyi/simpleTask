@@ -7,7 +7,7 @@ public class MyTask extends Thread {
 	 */
 	@Override
 	public void run() {
-		System.out.println("task running!");
+		System.out.println("currentThreadId: "+this.currentThread().getId()+"  task running!");
 	}
 	
 }
